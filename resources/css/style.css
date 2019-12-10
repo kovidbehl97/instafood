@@ -1,0 +1,489 @@
+/*----------------------*/
+/*BASIC SETUP*/
+/*----------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'sans-serif';
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix{zoom: 1}
+.clearfix:after{
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/*----------------------*/
+/*REUSABLE COMPONENTS*/
+/*----------------------*/
+.row {
+    max-width: 1140px;
+    margin: 0 auto 0 auto;
+
+}
+
+section {
+    padding: 80px 0;
+}
+
+.box {
+    padding: 1%;
+    text-align: center;
+    padding-top: 3%;
+}
+
+/*---------headings-------*/
+h1 {
+    font-family: Lato;
+    font-variant-caps: all-petite-caps;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 200;
+    font-size: 350%;
+    word-spacing: 3px;
+    margin-left: 1vh;
+}
+
+h2 {
+    font-family: Lato;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+
+
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: darkorange;
+    content: " ";
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+    margin-top: 7px;
+}
+/*---------icons----------*/
+i {
+    font-size: 300%;
+    color: darkorange;
+}
+/*--------paras------------*/
+.longtxt {
+    line-height: 145%;
+    margin-left: 15%;
+    width: 70%;
+    text-align: center;
+}
+
+/*----------BUTTONS----------*/
+.button:first-child,lin{
+    margin-left: 3vh;
+}
+.button:link,
+.button:visited,
+input[type=submit]{
+    display: inline-block;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-family: 'Lato', 'sans-serif';
+    font-weight: 300;
+    font-size: 95%;
+    border: 1px solid darkorange;
+    transition: background-color 0.2s;
+ 
+   
+
+}
+
+.button:hover,
+.button:active,
+input[type=submit]:hover,
+input[type=submit]:active{
+    display: inline-block;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-family: 'Lato', 'sans-serif';
+    font-weight: 300;
+    font-size: 95%;
+    border: 1px solid #aa5d00;
+   
+}
+
+.btn-solid:link,
+.btn-solid:visited,
+input[type=submit]{
+    background-color: darkorange;
+    border-radius: 200px;
+    margin-right: 10px;
+    color: white;
+}
+
+.btn-solid:hover,
+.btn-solid:active,
+input[type=submit]:hover,
+input[type=submit]:active{
+    background-color: #aa5d00;
+    border-radius: 200px;
+    color: white;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    background-color: transparent;
+    border-radius: 200px;
+    color: darkorange;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    background-color: rgba(85, 85, 85, 0.3);
+    border-radius: 200px;
+    color: #aa5d00;
+}
+
+/*----------------------*/
+/*header*/
+/*----------------------*/
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1040px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+    margin-top: 55px;
+
+}
+
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    padding: 5px;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid darkorange;
+}
+/*----------------------*/
+/*section features*/
+/*----------------------*/
+
+.sec-features .longtxt {
+margin-bottom: 35px;
+}
+
+/*----------------------*/
+/*section 3(meals)*/
+/*----------------------*/
+.sec-meals{
+    padding: 0;
+}
+.meals-showcase {
+    list-style: none;
+    width: 100%;
+    
+}
+.meals-showcase li {
+    display: block;
+    float: left;
+    width:25%;
+}
+.meal-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+}
+.meal-photo img{
+    width:100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 1s ,opacity 0.5s ;
+    opacity: 0.7;
+}
+
+.meal-photo img:hover{
+    transform: scale(1.03);
+    opacity: 1;
+}
+/*----------------------*/
+/*how it works section */
+/*----------------------*/
+
+.steps-box{
+    margin-top: 30px;
+}
+.setps-box:first-child{
+    text-align: right;
+    padding-right: 3%;
+}
+.setps-box:last-child{
+    padding-left: 3%;
+    
+}
+
+.app-screen {
+    width: 400px;
+   
+}
+.steps-box img{
+    padding-left: 25%;
+    
+}
+.works-step{
+    margin-bottom: 85px
+}
+.works-step div{
+    color: darkorange;
+    border: 2px solid #a2a2a2;
+    display: inline-block;
+    border-radius: 50px;
+    width: 50px;
+    text-align: center;
+    padding: 5px;  
+    float: left;
+    font-size: 150%;
+    margin-left: 25px;
+    
+}
+.works-step p{
+    padding-left: 100px;
+}
+.steps-right {
+    padding-top: 100px;
+}
+.sec-steps{
+    background-color: #eaeaea;
+}
+
+/*----------------------*/
+/*cities section */
+/*----------------------*/
+
+.sec-cities img{
+    width: 100px;
+    height: auto;
+    padding-bottom: 15px;
+    margin: 0;
+}
+.sec-cities i{
+    color: #646464;
+    font-size: 100%;
+}
+.sec-cities p{
+    text-align: left;
+    margin-left: 15%;
+}
+
+
+/*----------------------*/
+/*testimonials section */
+/*----------------------*/
+
+.sec-testimonials{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),url(img/back-customers.jpg);
+    background-size: cover;
+    color: white;
+   
+    background-attachment: fixed;
+}
+blockquote{
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+cite{
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+blockquote:before
+{
+    content:"\201C";
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: -5px;
+}
+
+cite img{
+    height: 45px;
+    border-radius: 50%;
+    margin:10px;
+    vertical-align: middle;
+}
+
+/*----------------------*/
+/*plans section */
+/*----------------------*/
+
+.sec-plans{
+    background-color: #eaeaea;
+}
+
+.plan-box{
+    background-color: #fff;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.plan-box div{
+    padding: 15px;
+    border-bottom: 1px solid #b2b2b2;
+} 
+.plan-box div:first-child{
+    background-color: #f4f4f4;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 0 2px 2px #ededed;
+}
+.plan-box div:last-child{
+    text-align: center;
+    border: none;
+}
+.plan-box ul{
+    list-style: none;
+}
+.plan-box i{
+    font-size: 180%;
+    padding-right: 10px;
+}
+
+.plan-price{
+    font-size: 180%;
+    margin-bottom: 10px;
+    font-weight: 100;
+}
+.empty{
+    color: transparent;
+}
+.plan-price span{
+    font-size: 60%;
+    font-weight: 300;
+}
+.plan-price-meal{
+    font-size: 80%;
+}
+  
+
+/*----------------------*/
+/*contact form section */
+/*----------------------*/
+
+.contact form{
+    width: 50%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea{
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+textarea{
+    height: 100px;
+}
+input[type=checkbox]{
+    margin: 10px 5px 10px 0;
+}
+*:focus{outline: none;}
+
+/*----------------------*/
+/*footer section */
+/*----------------------*/
+
+footer{
+    background-color: #333;
+    padding: 20px;
+}
+.footer-nav{
+    list-style: none;
+    float: left;
+}
+.footer-nav li{
+    display: inline-block;
+    margin: 20px;
+}
+.footer-nav li a:link,
+.footer-nav li a:visited{
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    transition: color 0.2s;
+}
+.footer-nav li a:hover,
+.footer-nav li a:active{
+    color: #ddd;
+}
+footer p{
+ color: #888;
+    text-align: center;
+    font-size: 80%;
+    float: right;
+    padding: 35px;
+    
+   
+}
